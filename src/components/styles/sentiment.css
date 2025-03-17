@@ -1,0 +1,242 @@
+/* Sentiment.css */
+.sentiment-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+h2, h3 {
+    margin-bottom: 16px;
+    color: #333;
+}
+
+.key-events {
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.event-card {
+    display: flex;
+    align-items: flex-start;
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    width: 456px;
+    height: 204px;
+    box-sizing: border-box;
+}
+
+.event-card .icon {
+    font-size: 24px;
+    margin-right: 16px;
+}
+
+.event-card .content h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.event-card .content p {
+    margin: 8px 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.event-card.blue {
+    background-color: #eaf3ff;
+}
+
+.event-card.green {
+    background-color: #eafbe7;
+}
+
+.analyst-estimates .estimate-container {
+    display: flex;
+    align-items: center;
+}
+
+.analyst-estimates .percentage {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-right: 24px;
+}
+
+.analyst-estimates .bars {
+    flex-grow: 1;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.bar .label {
+    width: 60px;
+    font-size: 14px;
+    color: #333;
+}
+
+.bar-fill {
+    height: 10px;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    transition: width 0.3s ease-in-out; /* Smooth transition for visual effect */
+}
+.bar-fill.buy {
+    background-color: #28a745; /* Green */
+}
+.bar-fill.hold {
+    background-color: #C7C8CE; /* Yellow */
+}
+.bar-fill.sell {
+    background-color: #dc3545; /* Red */
+}
+
+.percentage {
+    background-color: #EBF9F4;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #28a745 !important;
+}
+
+/* Container for the carousel */
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.event-card {
+    flex: 0 0 50%; /* Each card takes 50% of the container width */
+    box-sizing: border-box;
+    padding: 16px;
+    margin: 0; /* No extra margins since spacing is handled via flexbox */
+}
+
+/* Add spacing between cards */
+.event-card:not(:last-child) {
+    margin-right: 16px; /* Space between cards */
+}
+
+/* Controls for navigation */
+.carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    height: 90%;
+}
+
+.carousel-controls button {
+    border: none;
+    background-color: #ffffff;
+    color: rgb(206, 204, 204);
+    padding: 8px 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.carousel-controls button:hover {
+    background-color: #d3d3d3;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .event-card {
+        flex: 0 0 100%; /* On medium screens, each card takes full width */
+    }
+
+    .carousel-controls {
+        top: 20px; /* Adjust control button position */
+        gap: 5px;
+    }
+
+    .carousel-controls button {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .event-card {
+        flex: 0 0 100%; /* On smaller screens, each card takes full width */
+        width: auto; /* Allow flexibility in width */
+    }
+
+    .sentiment-container {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    h2, h3 {
+        font-size: 18px; /* Adjust heading size */
+    }
+
+    .key-events {
+        margin-bottom: 16px;
+    }
+
+    .analyst-estimates .percentage {
+        font-size: 24px; /* Reduce font size */
+        width: 80px;
+        height: 80px;
+    }
+
+    .bar-fill {
+        height: 8px; /* Smaller bars on smaller screens */
+    }
+
+    .bar .label {
+        font-size: 12px; /* Adjust label font size */
+    }
+
+    .carousel-controls {
+        top: 10px; /* Adjust control button position */
+    }
+}
+
+/* For very small screens (like mobile phones) */
+@media (max-width: 480px) {
+    .event-card {
+        flex: 0 0 100%; /* Ensure full width */
+        height: auto; /* Allow height flexibility */
+    }
+
+    .sentiment-container {
+        padding: 8px; /* Further reduce padding */
+    }
+
+    h2, h3 {
+        font-size: 16px; /* Reduce font size for smaller screens */
+    }
+
+    .carousel-controls button {
+        padding: 6px 12px; /* Smaller buttons for mobile */
+    }
+
+    .analyst-estimates .percentage {
+        font-size: 20px; /* Even smaller font size */
+        width: 70px;
+        height: 70px;
+    }
+
+    .bar-fill {
+        height: 6px; /* Further reduce bar height */
+    }
+}

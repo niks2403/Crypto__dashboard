@@ -1,0 +1,68 @@
+.home-container {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+
+.recharts-surface {
+    border-radius: 50% !important;
+}
+
+.recharts-legend-wrapper {
+    margin-left: 200px !important;
+}
+
+.home-first {
+    width: 60%;
+    margin: 56px 15px 0 56px;
+    position: relative;
+}
+
+.home-second {
+    flex: 1;
+    margin: 56px 56px 0 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.coin-data {
+    width: 100%; /* Ensure full width */
+    margin: 16px 0; /* Add spacing */
+    order: 1; /* Default for desktop */
+}
+
+.koinx-card {
+    order: 2; /* Default for desktop */
+}
+
+.trending-coins {
+    order: 3; /* Default for desktop */
+}
+
+@media screen and (max-width: 843px) {
+    .home-first {
+        width: 90%;
+        margin: 56px auto !important;
+    }
+
+    .home-second {
+        width: 90%;
+        margin: 56px auto;
+    }
+
+    .home-container {
+        flex-direction: column;
+    }
+
+    .coin-data {
+        order: 1; /* Place CoinData at the top of .home-second */
+    }
+
+    .koinx-card {
+        order: 2; /* KoinXCard comes after CoinData */
+    }
+
+    .trending-coins {
+        order: 3; /* TrendingCoins stays at the bottom */
+    }
+}

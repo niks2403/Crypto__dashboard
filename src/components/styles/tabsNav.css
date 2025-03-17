@@ -1,0 +1,44 @@
+.tabular-nav {
+    width: 100%; 
+    overflow: visible;
+  }
+  .tabular_con{
+    width: 100%;
+  }
+  
+  .tabs-container {
+    display: flex; 
+    overflow-x: auto; 
+    white-space: nowrap; 
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory; 
+  }
+  
+  .tabs-container::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .tabs-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2); 
+    border-radius: 4px;
+  }
+  
+  .tab-button {
+    min-width: 120px;
+    flex-shrink: 0;
+    padding: 12px;
+  }
+  
+  @media screen and (max-width: 843px) {
+    .tabs-container {
+      min-width: auto;
+    }
+  
+    .tab-button {
+      min-width: 100px;
+    }
+    .tabular-con{
+        width: 90vw !important;
+    }
+  }
+  

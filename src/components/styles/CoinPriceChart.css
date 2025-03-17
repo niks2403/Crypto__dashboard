@@ -1,0 +1,74 @@
+.price-chart-container {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+  }
+  
+  .rank {
+    background: #f3f3f3;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .price h1 {
+    font-size: 28px;
+    margin: 0;
+  }
+  
+  .change {
+    color: #2fbf50;
+    font-weight: bold;
+  }
+  
+  .inr {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .chart {
+    margin: 16px 0;
+  }
+  
+  .time-filters {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .time-filters button {
+    border: none;
+    background: #f9f9f9;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  .time-filters .active {
+    background: #0071ff;
+    color: white;
+  }
+  
